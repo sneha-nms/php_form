@@ -1,16 +1,11 @@
 <?php 
 
 session_start();
-// echo "pattabi";
 
-
-// $config = include "config.php";
 
 require "./module/DB.php";
 
-// require "../login_view.php";
-// $database = new Database($config);
-// $dataConnection = $database->conn();
+
 
 
 if(isset($_POST['submit'])){
@@ -26,6 +21,7 @@ if(isset($_POST['submit'])){
    $result=mysqli_query($dataConnection,$sql);
    if($result->num_rows > 0){
     $_SESSION['name'] = $name; 
+    
     // echo('insde');
     header("Location:./home_page.php");
 

@@ -8,13 +8,16 @@
    
 </head>
 <body class="bg-gray-100 text-gray-800">
-<?php include "./view/par/nav.php" ;?>
+<?php
+session_start();
+$name= $_SESSION['name'];
+include "./view/par/nav.php" ;?>
   
 
     <!-- Hero Section -->
     <div class="bg-blue-600">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">Welcome to Course</h1>
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">Welcome to <?php echo $name?></h1>
             <p class="mt-6 max-w-2xl mx-auto text-lg text-blue-200">We provide the best solutions for your business needs.</p>
             <div class="mt-8 flex justify-center">
                 <div class="rounded-md shadow">
